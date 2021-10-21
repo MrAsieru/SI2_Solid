@@ -3,16 +3,23 @@ package lsk;
 import java.util.Vector;
 
 public class Project {
-	public Vector<ProjectFile> files=new Vector<ProjectFile>();
-	public void addProject(ProjectFile p){
-		files.add(p);
+	public Vector<FileSaveable> filesSaveable=new Vector<FileSaveable>();
+	public Vector<FileReadable> filesReadable=new Vector<FileReadable>();
+
+	public void addProjectSaveAble(FileSaveable p){
+		filesSaveable.add(p);
 	}
+	
+	public void addProjectReadAble(FileReadable p){
+		filesReadable.add(p);
+	}
+	
 	public void loadAllFiles(){
-		for (ProjectFile f:files)
+		for (FileReadable f: filesReadable)
 		f.loadFile();
 	}
 	public void storeAllFiles(){
-		for (ProjectFile f:files)
+		for (FileSaveable f:filesSaveable)
 		f.storeFile();
 	}
 }

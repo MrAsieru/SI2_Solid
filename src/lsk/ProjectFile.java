@@ -1,6 +1,6 @@
 package lsk;
 
-public class ProjectFile {
+public class ProjectFile  implements FileReadable, FileSaveable{
 	public String filePath;
 	public ProjectFile(String filePath){
 		this.filePath=filePath;
