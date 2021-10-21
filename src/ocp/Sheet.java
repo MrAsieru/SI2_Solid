@@ -4,26 +4,29 @@ import java.util.Enumeration;
 import java.util.Vector;
 
 public class Sheet{
-	Vector< Square> squares=new Vector< Square>();
-	Vector<Circle> circles= new Vector< Circle>();
-	public void addCircle(Circle c){
-		circles.add(c);
+	Vector<Figure> figures=new Vector<>();
+	
+	public void addFigure(Figure f) {
+		figures.add(f);
 	}
-	public void addSquare(Square s){
-		squares.add(s);
-	}
+
 	public void drawFigures(){
-		Enumeration<Square> esquares=squares.elements();
-		Square s;
-		while (esquares.hasMoreElements()){
-			s=esquares.nextElement();
-			s.draw();
+		Enumeration<Figure> efigures = figures.elements();
+		Figure f;
+		while (efigures.hasMoreElements()){
+			f = efigures.nextElement();
+			f.draw();
+		}		
+	}
+	
+	public float getTotalArea() {
+		float total = 0;
+		Enumeration<Figure> efigures = figures.elements();
+		Figure f;
+		while (efigures.hasMoreElements()){
+			f = efigures.nextElement();
+			total += f.getArea();
 		}
-		Enumeration<Circles> ecircles=circles.elements();
-		Circle c;
-		while (circles.hasMoreElements()){
-			c=ecircles.nextElement();
-			c.draw();
-		}
+		return total;
 	}
 }
