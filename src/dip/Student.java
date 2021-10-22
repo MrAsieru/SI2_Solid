@@ -1,5 +1,8 @@
 package dip;
 
+import java.beans.PropertyEditor;
+import java.util.HashMap;
+
 public class Student {
 	public String name;
 	public String sex;
@@ -12,20 +15,17 @@ public class Student {
 	public String toCharge;
 	
 	// Irakasgai batean matrikulatzen duen metodoa.
-	public void register(String subject) {
+	public void register(String subject, Predictable p, Deductionable d, SubjectCostable sq) {
 		// Aurrebaldintzak konprobatzen dira
-		Preconditions p=new Preconditions();
 		boolean isPosible = p.isPosible(subject , subjectRecord);
 		if (isPosible) {
 			// Dedukzioa kalkulatu sex eta edadearen arabera
-			Deduction d=new Deduction();
 			int percentage = d.calcDeduction(sex, year);
 			// Irakasgaiaren prezioa lortu
-			SubjectQuotes sq=new SubjectQuotes();
 			int quote = sq.getPrice(subject);
 			// HashMap batean gordetzen du eta ordaindu behar duen balioa eguneratu
 			subjectRecord.put(subject,null);
-			toCharge = toCharge+(quote-percentaje*quote/100);
+			toCharge = toCharge+(quote-percentage*quote/100);
 		}
 	}
 }
