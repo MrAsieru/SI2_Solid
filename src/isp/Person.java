@@ -1,6 +1,6 @@
 package isp;
 
-public class Person {
+public class Person implements EmailSendable, SMSSendable {
 	 String name, address, email, telephone;
 	 public void setName(String n) { name=n; }
 	 public String getName() { return name; }
@@ -8,7 +8,7 @@ public class Person {
 	 public void setAddress(String a) { address=a; }
 	 public String getAddress() { return address; }
 
-	 public void setEmail (String e) { email=ea; }
+	 public void setEmail (String e) { email=e; }
 	 public String getEmail () { return email; }
 
 	 public void setTelephone(String t) { telephone=t; }
