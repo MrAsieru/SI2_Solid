@@ -11,13 +11,13 @@ public class Bill {
 	public float VAT;
 	public float billTotal;
 	
-	public VATCalculator bVAT = new BasicVAT();
-	public Deduction bd = new BasicDeduction();
+	public VATCalculator bVAT = new MediumVAT();
+	public Deduction bd = new ComplexDeduction();
 	
 	// Fakturaren totala kalkulatzen duen metodoa.
 	public void totalCalc() {
 		// Dedukzioa kalkulatu
-		billDeduction = bd.calculateBillDeduction(billAmount);
+		billDeduction = bd.calculateDeduction(billAmount);
 		// VATprecentage kalkulatzen dugu
 		if ("0".equals(code)) {
 			VAT = bVAT.calculateVAT(billAmount);

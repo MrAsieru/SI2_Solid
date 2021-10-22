@@ -2,6 +2,6 @@ package srp;
 
 public interface Deduction {
 
-	float calculateBillDeduction(float billAmount);
+	float calculateDeduction(float billAmount);
 
 }
