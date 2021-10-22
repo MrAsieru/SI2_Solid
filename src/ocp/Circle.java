@@ -11,8 +11,7 @@ public class Circle extends Figure {
 		System.out.println("Circle draw: diameter="+diameter);
 	}
 	
-	@Override
 	public float getArea() {
-		return (float) (Math.PI*Math.pow(diameter, 2));
+		return (float) (Math.PI*Math.pow(diameter/2, 2));
 	}
 }

@@ -1,6 +1,6 @@
 package ocp;
 
-public class main {
+public class Main {
 	public static void main(String[] args) {
 		Sheet sheet = new Sheet();
 		
