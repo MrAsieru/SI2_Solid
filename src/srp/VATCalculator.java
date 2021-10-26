@@ -1,5 +1,5 @@
 package srp;
 
 public interface VATCalculator {
-	public float calculateVAT(float ammount);
+	public float calculateVAT(float amount);
 }
