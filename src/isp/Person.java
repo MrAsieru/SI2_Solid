@@ -14,4 +14,4 @@ public class Person implements EmailSendable, SMSSendable {
 	 public void setTelephone(String t) { telephone=t; }
 	 public String getTelephone() { return telephone; }
 
-	}
+}
