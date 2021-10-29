@@ -9,7 +9,7 @@ public class main {
 	public static void main(String[] args) {
 		System.out.print("Hasieratzen...");
 		Project project = new Project();
-		FileSaveable fileSaveable = new SaveFile();
+		FileSaveable fileSaveable = new SaveFile("dir");
 		project.addProjectSaveAble(fileSaveable);
 	
 		project.storeAllFiles();
