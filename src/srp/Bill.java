@@ -19,7 +19,7 @@ public class Bill {
 		// Dedukzioa kalkulatu
 		billDeduction = bd.calculateDeduction(billAmount);
 		// VATprecentage kalkulatzen dugu
-		if ("0".equals(code)) {
+		if (!"0".equals(code)) {
 			VAT = bVAT.calculateVAT(billAmount);
 		}else {
 			VAT = 0;
